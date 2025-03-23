@@ -13,37 +13,14 @@ import usersIcon from './assets/users.png'
 import group from './assets/account-group-outline.png'
 import stack from './assets/stack.png'
 import dots from './assets/dots-vertical-circle-outline.png'
+import NavBar from './components/NavBar'
+import { useLocation } from 'react-router-dom'
 function App() {
+  const screenLocation=useLocation();
   return (
     <div className='h-full min-h-screen w-full flex  flex-row'>
           {/*nav bar*/}
-     <div className="flex flex-col items-center px-5 py-10 bg-main-500 flex-grow min-h-screen">
-       <img src={logo} className='w-72 h-40'/>
-       <div className='flex flex-row px-6 py-3 items-center text-white bg-gray-400 w-full'>
-          <img src={chartBar} className='w-6 h-6 mx-3'/>
-          <span>Dashboard</span>
-       </div>
-       <div className='flex flex-row px-6 py-3 items-center text-white  w-full'>
-          <img src={magnify} className='w-6 h-6 mx-3'/>
-          <span>Find Investors</span>
-       </div>
-       <div className='flex flex-row px-6 py-3 items-center text-white  w-full'>
-          <img src={chat} className='w-6 h-6 mx-3'/>
-          <span>Messages</span>
-       </div>
-       <div className='flex flex-row px-6 py-3 items-center text-white  w-full'>
-          <img src={gear} className='w-6 h-6 mx-3'/>
-          <span>Statistics</span>
-       </div>
-       <div className='flex flex-row px-6 py-3 items-center text-white  w-full'>
-          <img src={creditCard} className='w-6 h-6 mx-3'/>
-          <span>Wallet</span>
-       </div>
-       <div className='flex flex-row px-6 py-3 items-center text-white  w-full'>
-          <img src={history} className='w-6 h-6 mx-3'/>
-          <span>Settings</span>
-       </div>
-      </div>
+      <NavBar screen={screenLocation.pathname}/>
           {/*body */}
       <div>
         <div className='flex flex-row mx-12 my-8 gap-5'>
@@ -55,26 +32,28 @@ function App() {
           </div>
           <img src={dummy} className='w-17 h-17 rounded-full'/>
         </div>
-        <div className=' flex  mx-12 my-8 flex-row gap-20 py-1 px-5 bg-gray-200 items-center'>
-          <div className='bg-white shadow-2xl rounded flex flex-row px-3 py-2'>
-            <img src={usersIcon} className='w-8 h-8 mr-3' />
-            <div className='flex flex-col'>
-              <span className='text-secondary-500 text-xl font-bold'>Partners</span>
-              <span className='text-secondary-500 text-xl'>+20</span>
+        <div className='flex justify-start'>
+          <div className=' flex  mx-12 my-8 flex-row gap-5  rounded overflow-hidden py-3 px-5 bg-gray-200 items-center'>
+            <div className='bg-white shadow-xl rounded flex flex-row px-3 py-2'>
+              <img src={usersIcon} className='w-8 h-8 mr-3' />
+              <div className='flex flex-col'>
+                <span className='text-secondary-500 text-xl font-bold'>Partners</span>
+                <span className='text-secondary-500 text-xl'>+20</span>
+              </div>
             </div>
-          </div>
-          <div className='bg-white shadow-2xl rounded flex flex-row px-3 py-2'>
-            <img src={group} className='w-8 h-8 mr-3' />
-            <div className='flex flex-col'>
-              <span className='text-secondary-500 text-xl font-bold'>Employees</span>
-              <span className='text-secondary-500 text-xl'>+50</span>
+            <div className='bg-white shadow-xl rounded flex flex-row px-3 py-2'>
+              <img src={group} className='w-8 h-8 mr-3' />
+              <div className='flex flex-col'>
+                <span className='text-secondary-500 text-xl font-bold'>Employees</span>
+                <span className='text-secondary-500 text-xl'>+50</span>
+              </div>
             </div>
-          </div>
-          <div className='bg-white shadow-2xl rounded flex flex-row px-3 py-2'>
-            <img src={stack} className='w-8 h-8 mr-3' />
-            <div className='flex flex-col'>
-              <span className='text-secondary-500 text-xl font-bold'>Products</span>
-              <span className='text-secondary-500 text-xl'>+10</span>
+            <div className='bg-white shadow-xl rounded flex flex-row px-3 py-2'>
+              <img src={stack} className='w-8 h-8 mr-3' />
+              <div className='flex flex-col'>
+                <span className='text-secondary-500 text-xl font-bold'>Products</span>
+                <span className='text-secondary-500 text-xl'>+10</span>
+              </div>
             </div>
           </div>
         </div>
