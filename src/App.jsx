@@ -4,7 +4,7 @@ import bell from "./assets/Bell.png"
 import dummy from "./assets/dummy.png" 
 import usersIcon from './assets/users.png'
 import group from './assets/account-group-outline.png'
-import stack from './assets/stack.png'
+import stack from './assets/Stack.png'
 import dots from './assets/dots-vertical-circle-outline.png'
 import NavBar from './components/NavBar'
 import { useLocation } from 'react-router-dom'
