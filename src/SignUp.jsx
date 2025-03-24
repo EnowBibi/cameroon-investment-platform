@@ -22,7 +22,8 @@ function SignUp() {
             <input type="checkbox" id="rememberMe" className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"/>
             <label htmlFor="rememberMe" className="ml-2 block text-sm text-gray-900">Remember me</label>
           </div>
-          <button className="bg-green-950 text-white py-2 px-4 rounded-sm hover:text-black hover:bg-green-400 cursor-pointer" type="submit">SignUp</button>
+          <button  className="bg-green-950 text-white py-2 px-4 rounded-sm transition-all duration-300 ease-in-out hover:bg-green-400 hover:text-black font-semibold hover:shadow-lg hover:shadow-green-400/50"
+  type="submit">Let's Go!</button>
         </form>
       </div>
     </div>
